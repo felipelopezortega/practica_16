@@ -1,0 +1,37 @@
+<html>
+<head>
+    <link href="assets/style.css" type="text/css"   rel="stylesheet" >
+</head>
+<body>
+    <h1>Person: <%= ID %></h1>
+    <%switch(Message){
+        case "Hola":%>
+        <h2>Mensaje: <%= Message %></h2>
+        <h2>TIMES: <%= Times %></h2>
+        <ul>
+            <%for(let i = 0; i < Times; i++){%>
+                <li>  <%= Message %> <%= ID %></li>
+            <%}%>
+        </ul>
+        <%break;
+        case "Bienvenido":%>
+        <h2>Mensaje: <%= Message %></h2>
+        <ul>
+            <%for(let i = 0; i < Times; i++){%>
+                <li>  <%= Message %> <%= ID %></li>
+            <%}%>
+        </ul>
+        <%break;
+        case "Adios":%>
+        <h2>Mensaje: <%= Message %></h2>
+        <ul>
+            <%for(let i = 0; i < Times; i++){%>
+                <li>  <%= Message %> <%= ID %></li>
+            <%}%>
+        </ul>
+        <%break;
+        default:%>
+        <p>Mensaje: No es válido el mensaje</p>
+        <%}%>
+</body>
+</html>
